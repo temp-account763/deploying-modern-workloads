@@ -24,13 +24,13 @@ jobs:
       ARM_TENANT_ID: ${{secrets.DMW_ARM_TENANT_ID}}
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       # Initialize the 'Terraform Setup' GitHub Action, which installs Terraform on the GitHub Action container.
       - name: Setup Terraform
         # The 'uses' clause identifies where this GitHub Action can be found.
         # E.g., https://github.com/hashicorp/setup-terraform
-        uses: hashicorp/setup-terraform@v1
+        uses: hashicorp/setup-terraform@v2
         # The 'with' clause is for passing configuration values to the Action.
         with:
           # This allows us to use remote state in Azure storage instead of Terraform Cloud or Terraform Enterprise.
