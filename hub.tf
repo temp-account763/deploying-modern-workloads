@@ -51,7 +51,7 @@ resource "azurerm_log_analytics_workspace" "hub" {
   resource_group_name = var.hub_resource_group
   location            = var.location
 
-  sku               = "Free"
+  sku               = "PerGB2018"
   retention_in_days = 7
 }
 
