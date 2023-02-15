@@ -52,7 +52,7 @@ resource "azurerm_log_analytics_workspace" "hub" {
   location            = var.location
 
   sku               = "PerGB2018"
-  retention_in_days = 7
+  retention_in_days = 30
 }
 
 resource "azurerm_storage_account" "hub" {
